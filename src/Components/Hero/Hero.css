@@ -1,0 +1,140 @@
+/* Ensure full height for HTML and body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the headpage */
+.headpage {
+    display: flex;
+    gap: 20px; /* Adjust gap as needed */
+    background: linear-gradient(to bottom, rgb(212, 168, 174), rgb(204, 192, 192));
+    height: 80vh; /* Occupies 80% of the viewport height */
+    align-items: center; /* Vertically center items */
+    justify-content: center; /* Horizontally center items */
+}
+
+/* Style for hello class */
+.hello {
+    
+    align-items: center; /* Center content vertically */
+    gap: 20px; /* Space between text and button */
+    text-align: center; /* Center text */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+/* Style for handicon class */
+.handicon {
+    text-align: center;
+}
+
+/* Style for arrival button */
+.arrival-btn {
+    border-radius: 10px;
+    padding: 10px 20px; /* Added padding for better button appearance */
+    border: none; /* Removed border for a cleaner look */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.arrival-btn:hover {
+    background-color: rgba(183, 202, 202, 0.8); /* Slightly darker background on hover */
+}
+
+/* Style for images */
+.img {
+    padding-left: 150px;
+    margin: 50px;
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive adjustments for screens up to 1200px */
+@media (max-width: 1200px) {
+    .headpage {
+        gap: 15px; /* Adjust gap */
+        padding: 15px; /* Add some padding */
+    }
+
+    .hello {
+        gap: 15px; /* Adjust gap between elements */
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust font size */
+    }
+}
+
+/* Responsive adjustments for screens up to 900px */
+@media (max-width: 900px) {
+    .headpage {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height to fit content */
+        gap: 10px; /* Adjust gap */
+        padding: 10px; /* Add some padding */
+    }
+
+    .hello {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Adjust gap between elements */
+    }
+
+    .img {
+        padding-left: 0;
+        margin: 20px;
+    }
+}
+
+/* Additional responsive adjustments for screens up to 450px */
+@media (max-width: 450px) {
+    .headpage {
+        gap: 10px; /* Reduce gap on very small screens */
+        padding: 10px; /* Add some padding */
+    }
+
+    .hello {
+        gap: 10px; /* Reduce gap between elements */
+    }
+
+    .arrival-btn {
+        width: 100%; /* Make button take full width */
+        padding: 10px 0; /* Adjust padding for better appearance */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    .img {
+        margin: 10px;
+    }
+}
+
+/* Additional responsive adjustments for screens up to 300px */
+@media (max-width: 300px) {
+    .headpage {
+        flex-direction: column; /* Stack items vertically */
+        gap: 5px; /* Reduce gap */
+        padding: 5px; /* Reduce padding */
+    }
+
+    .hello {
+        flex-direction: column; /* Stack items vertically */
+        gap: 5px; /* Reduce gap between elements */
+    }
+
+    .arrival-btn {
+        width: 100%; /* Make button take full width */
+        padding: 8px 0; /* Adjust padding for better appearance */
+        font-size: 0.9em; /* Adjust font size */
+    }
+
+    h1 {
+        font-size: 1.2em; /* Adjust font size for very small screens */
+    }
+
+    .img {
+        margin: 5px;
+    }
+}
